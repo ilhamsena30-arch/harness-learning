@@ -1,0 +1,23 @@
+Read the text below and return it as json.
+
+Rules:
+- Keep every method from the text, in the original order.
+- Do not invent methods that are not in the text.
+- Do not merge two methods into one entry.
+
+Return json with exactly this shape:
+
+{
+  "methods": [
+    {
+      "name": "short method name",
+      "description": "one or two sentences on how the method works",
+      "example": "a short code snippet or usage note"
+    }
+  ]
+}
+
+Do not wrap the output in markdown fences and do not add commentary.
+
+--- TEXT ---
+{{PAYLOAD}}

@@ -1,0 +1,13 @@
+Write production-ready Python code that implements the method below.
+
+Requirements:
+- One self-contained module with a module docstring.
+- Type hints on every function.
+- Handle errors explicitly; never swallow an exception silently.
+- Include a short `if __name__ == "__main__":` demo.
+- Comment on security-relevant choices where they matter.
+
+Return only Python code: no markdown fences and no commentary outside the code.
+
+--- METHOD (json) ---
+{{PAYLOAD}}

@@ -1,0 +1,27 @@
+Score every method below from 0.0 to 1.0 in each evaluation category.
+
+Rules:
+- Each score is a decimal between 0.0 (worst) and 1.0 (best).
+- Score every category for every method, and use the same category names each time.
+- Judge the method's real-world suitability, not how long its description is.
+- Do not omit any method.
+
+Return json with exactly this shape:
+
+{
+  "evaluations": [
+    {
+      "name": "method name, copied exactly as given",
+      "categories": { "CategoryName": 0.0 },
+      "notes": "one sentence justifying the scores"
+    }
+  ]
+}
+
+Do not wrap the output in markdown fences and do not add commentary.
+
+--- EVALUATION CRITERIA ---
+{{CRITERIA}}
+
+--- METHODS (json) ---
+{{PAYLOAD}}

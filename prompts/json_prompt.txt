@@ -1,0 +1,12 @@
+List 3 common SDET interview questions. For each one give a difficulty level and a short example answer.
+
+Return json with exactly this shape:
+{
+  "questions": [
+    {
+      "question": "the interview question",
+      "level": "easy | medium | hard",
+      "example_answer": "a 2-3 sentence model answer"
+    }
+  ]
+}
