@@ -54,7 +54,7 @@ where the current work lives.
 | 1 | **Foundations of Test-Time Compute & Search** | Greedy decoding vs. beam search vs. MCTS; how a search tree expands nodes and spends a token budget | 🟡 Concepts discussed — no tree or search code yet |
 | 2 | **Verifiers & Process Reward Models (PRMs)** | ORMs vs. PRMs; scoring *intermediate* reasoning steps, not just the final answer | 🚧 **Current** |
 | 3 | **Code Structures & Static Analysis** | ASTs, static type checking, dependency graphs; using deterministic tool feedback to prune | ⬜ Not started |
-| 4 | **Paper Alignment & Toy Prototype** | Deconstruct Miyamoto et al., 2026; build an AST-guided tree search on a multi-function coding task | ⬜ Not started |
+| 4 | **Paper Alignment & Toy Prototype** | Deconstruct Miyamoto et al. 2026 (BG-MCTS, arXiv:2602.09574); build an AST-guided tree search on a multi-function coding task | ⬜ Not started |
 
 **The user is currently at Milestone 2.** Pitch explanations at that level: they
 know what an API call and a JSON schema are, and are now learning what it means
@@ -62,6 +62,38 @@ to *score an intermediate step* rather than only the final answer.
 
 > Maintenance note for the user: keep this table current. Agents rely on the
 > Status column to decide what to teach and what to build next.
+
+### Per-milestone skills
+
+One skill per milestone lives in `.github/skills/`. Each teaches the concept,
+guides a mini-project, and appends your result to `LEARNING_PROGRESS.md` (repo
+root). Invoke them by milestone topic, e.g. "What am I missing for Milestone 3?".
+
+| Skill | Covers |
+|-------|--------|
+| `.github/skills/milestone-1-search-foundations/` | greedy vs beam vs MCTS, tree expansion, token budgets |
+| `.github/skills/milestone-2-prm-verifiers/` | ORM vs PRM, scoring intermediate steps |
+| `.github/skills/milestone-3-static-analysis/` | ASTs, type checking, dependency graphs, deterministic verifiers |
+| `.github/skills/milestone-4-paper-prototype/` | Miyamoto et al. 2026 (BG-MCTS) + the AST-guided search prototype |
+
+### Reading list (per milestone)
+
+Each skill lists its papers in full; this is the quick map.
+
+| Milestone | Papers |
+|-----------|--------|
+| 1 | Tree of Thoughts (2305.10601) |
+| 2 | Let's Verify Step by Step (2305.20050), Uesato et al. (2211.14275), Math-Shepherd (2312.08935) |
+| 3 | PICARD (2109.05093), SynCode (2403.01632), Static Analysis as a Feedback Loop (2508.14419) |
+| 4 | BG-MCTS (2602.09574), Scaling Test-Time Compute (2408.03314) |
+
+Each paper has exactly **one primary milestone**. Two papers are reused later as
+prerequisites, but are not re-listed as new reads:
+
+- **Tree of Thoughts (2305.10601)** is read in Milestone 1 and reused in
+  Milestone 4.
+- **BG-MCTS (2602.09574)** is the Milestone 4 target paper; Milestone 1 only
+  points forward to it as a preview.
 
 ### How the existing code maps onto the curriculum
 
